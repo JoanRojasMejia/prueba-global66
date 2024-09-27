@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const fuzzySearchApi = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'https://fuzzy-search-pokemons.deno.dev/'
 })
 
 export default fuzzySearchApi
