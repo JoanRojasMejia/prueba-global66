@@ -2,12 +2,12 @@
 
 Este proyecto es una prueba técnica desarrollada con Vue.js para Global66, centrada en una Pokédex interactiva. Los usuarios pueden explorar una lista de pokémons, guardarlos en favoritos y realizar búsquedas difusas para encontrar pokémons de manera eficiente.
 
-<img style="border-radius: 20px;" src="https://github.com/JoanRojasMejia/portfolio/blob/main/public/screenshot.png?raw=true">
+<img style="border-radius: 20px;" src="https://raw.githubusercontent.com/JoanRojasMejia/prueba-global66/refs/heads/main/public/screen-web.webp">
 
 <div align="center">
 
 ![Static Badge](https://img.shields.io/badge/author-joan_rojas-%237849F7?style=for-the-badge)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fjoan-rojas.vercel.app%2F&style=for-the-badge&color=%23166445)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fpokedex-global66.vercel.app%2F&up_color=%23156545&style=for-the-badge)
 </div>
 
 ## 🛠️ Tecnologías y librerías utilizadas
