@@ -15,7 +15,6 @@ const formatPokemonClipboard = (pokemon: Pokemon | null): string => {
     .filter(([key]) => !notIncludedKeys.includes(key))
     .map(([key, value]) => `${key}: ${value}`)
     .join(', ')
-
   return formattedData
 }
 

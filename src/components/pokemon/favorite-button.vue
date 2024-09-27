@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-// import { usePokemonStore } from '../stores/pokemon'
 import IconFavorite from '../icons/IconFavorite.vue'
 import { usePokemonStore } from '@/stores/global-store'
 

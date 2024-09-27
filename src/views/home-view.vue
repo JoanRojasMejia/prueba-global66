@@ -16,7 +16,7 @@ const goToPokemonsView = () => {
     <div class="flex flex-col justify-center items-center max-w-[570px]">
       <IconPikachu class="w-[325px] mb-5" />
       <h1 class="text-[26px] my-[30px] text-title font-bold leading-[32px]">Welcome to Pokédex</h1>
-      <p class="text-lg text-center leading-[27px] text-content">
+      <p class="px-[30px] sm:px-0 text-lg text-center leading-[27px] text-content">
         The digital encyclopedia created by Professor Oak is an invaluable tool to Trainers in the
         Pokémon world.
       </p>

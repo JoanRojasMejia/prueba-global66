@@ -6,6 +6,7 @@ const LOCAL_STORAGE_KEY = 'favorite-pokemons'
 
 export const usePokemonStore = defineStore('pokemons', () => {
   const initialLoader = ref<boolean>(false)
+  const isSearchEmpty = ref<boolean>(false)
   const typeView = ref<'all' | 'favorites' | 'search'>('all')
   const currentPokemonsInView = ref<Record<string, string>>({})
   const favorites = ref<RemovableRef<Record<string, string>>>(
@@ -31,11 +32,6 @@ export const usePokemonStore = defineStore('pokemons', () => {
     favorites.value = restPokemons
   }
 
-  // const changeCurrentPokemons = (current_pokemons: 'all' | 'favorites') => {
-  //   if (current_pokemons === currentPokemons.value) return
-  //   currentPokemons.value = current_pokemons
-  // }
-
   const existFavorite = (pokemonName: string) => {
     return favorites.value[pokemonName]
   }
@@ -46,6 +42,14 @@ export const usePokemonStore = defineStore('pokemons', () => {
 
   const changeTypeView = (value: 'all' | 'favorites' | 'search') => {
     typeView.value = value
+  }
+
+  const changeCurrentPokemonsInView = (pokemons: Record<string, string>) => {
+    currentPokemonsInView.value = pokemons
+  }
+
+  const changeIsSearchEmpty = (value: boolean) => {
+    isSearchEmpty.value = value
   }
 
   watch(allPokemonsAPI, (pokemons) => {
@@ -66,19 +70,25 @@ export const usePokemonStore = defineStore('pokemons', () => {
       currentPokemonsInView.value = favorites.value
       return
     }
-    currentPokemonsInView.value = allPokemonsAPI.value
+    if (value === 'all') {
+      currentPokemonsInView.value = allPokemonsAPI.value
+      return
+    }
   })
 
   return {
     addFavorite,
     allPokemonsAPI,
+    changeCurrentPokemonsInView,
     changeInitialLoader,
-    changeTypeView,
-    typeView,
+    changeIsSearchEmpty,
     changePokemonsAPI,
+    changeTypeView,
     currentPokemonsInView,
     existFavorite,
     initialLoader,
-    removeFavorite
+    isSearchEmpty,
+    removeFavorite,
+    typeView
   }
 })

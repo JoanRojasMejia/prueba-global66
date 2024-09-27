@@ -12,6 +12,7 @@ const typeView = computed(() => store.typeView)
 const goFavorites = () => {
   store.changeTypeView('favorites')
 }
+
 const goAll = () => {
   store.changeTypeView('all')
 }

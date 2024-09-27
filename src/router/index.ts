@@ -13,6 +13,10 @@ const router = createRouter({
       path: '/pokemons',
       name: 'pokemons',
       component: () => import('../views/pokemons/pokemons-view.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: { name: 'home' }
     }
   ]
 })
