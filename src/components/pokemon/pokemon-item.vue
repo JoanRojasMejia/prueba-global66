@@ -19,7 +19,7 @@ const onClickShowModal = () => {
   <div
     class="flex justify-between items-center py-[5px] px-[8px] bg-white max-w-[570px] rounded-[5px] w-full relative"
   >
-    <span @click="onClickShowModal" class="absolute h-full w-11/12 cursor-pointer left-0" />
+    <span @click="onClickShowModal" class="absolute h-full w-[80%] sm:w-[85%] md:w-[90%] cursor-pointer left-0" />
     <span class="text-[22px] pl-[10px] capitalize text-title leading-[27px]">{{ pokemon }}</span>
     <FavoriteButton :pokemonName="pokemon" />
   </div>
